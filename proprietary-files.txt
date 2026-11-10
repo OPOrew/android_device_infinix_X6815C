@@ -1,0 +1,27 @@
+# Proprietary blob list for Infinix ZERO 5G 2023 (X6815C, MT6877).
+#
+# Format (LineageOS extract_utils):  [-]path/in/stock/image[;PRESIGNED|;OVERRIDES=...]
+#   - a leading "-" means: copy the file but do not add it to the product packages
+#   - one path per line, relative to the image root (vendor/..., odm/..., system_ext/...)
+#
+# This list is intentionally NOT pre-filled. Blob names differ between stock builds, and
+# guessing them would produce a list that extracts nothing or the wrong files.
+# Generate it from your own stock dump:
+#
+#   1. Mount/extract the stock super.img (lpunpack super.img out/, then mount vendor.img)
+#   2. (cd vendor_mount && find . -type f | sed 's|^\./|vendor/|' | sort) > all_vendor.txt
+#   3. Pick what the build needs, starting with the sections below, and paste here.
+#
+# Suggested order of bring-up (add one section, rebuild, test, repeat):
+#
+# --- Core boot (needed to reach the lock screen)
+#   vendor/etc/fstab.mt6877
+#   vendor/etc/init/*.rc for: boot control, keymaster/gatekeeper, health, power
+#   vendor/lib64/hw/*keymaster*  vendor/lib64/hw/*gatekeeper*  vendor/bin/hw/*boot*
+#
+# --- Display / graphics (HWComposer, gralloc, Mali G68 userspace: vulkan.*, libGLES_mali.so)
+# --- Audio (audio HAL, audio.primary.mt6877.so, tuning data under vendor/etc/audio_*)
+# --- Wi-Fi / BT / GNSS (WMT / connsys firmware lives under vendor/firmware and vendor/lib/modules)
+# --- Camera (camera HAL provider, libmtkcam_*, tuning under vendor/etc/camera and vendor/lib64/hw)
+# --- Radio / IMS / VoLTE (vendor/bin/hw/*radio*, mtk-ril, libmtkrillib, ims binaries)
+# --- Sensors, fingerprint, NFC, vibrator, lights

@@ -1,0 +1,6 @@
+<!--
+  PLACEHOLDER. Replace with the device matrix from stock:
+  /vendor/etc/vintf/compatibility_matrix.xml (if present).
+-->
+<compatibility-matrix version="1.0" type="device">
+</compatibility-matrix>

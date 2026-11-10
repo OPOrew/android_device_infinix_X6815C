@@ -1,0 +1,7 @@
+<!--
+  PLACEHOLDER. Only needed if the vendor requires extra framework HALs/versions beyond
+  the ROM defaults. Delete DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE in BoardConfig.mk
+  if you do not need it.
+-->
+<compatibility-matrix version="1.0" type="framework" level="5">
+</compatibility-matrix>

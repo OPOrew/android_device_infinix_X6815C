@@ -1,0 +1,4 @@
+# Device-specific system properties (TARGET_SYSTEM_PROP).
+# Add only what the stock build sets and the ROM does not. Fill from
+# tools/collect-device-info.sh output (device-info/getprop_all.txt), e.g. ro.sf.* /
+# persist.sys.* values that matter for display or telephony.

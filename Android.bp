@@ -1,0 +1,7 @@
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// Required so PRODUCT_SOONG_NAMESPACES += device/infinix/X6815C resolves.
+soong_namespace {
+}

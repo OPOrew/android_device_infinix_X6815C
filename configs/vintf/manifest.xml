@@ -1,0 +1,7 @@
+<!--
+  PLACEHOLDER. Replace with the stock file: adb pull /vendor/etc/vintf/manifest.xml
+  (tools/collect-device-info.sh pulls the whole vintf folder). Without the real HAL list
+  the build or boot will fail VINTF checks.
+-->
+<manifest version="1.0" type="device" target-level="5">
+</manifest>
